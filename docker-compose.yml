@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx_desktop:
+    image: nginx:latest
+    container_name: nginx_desktop
+    ports:
+      - "82:80"
+    volumes:
+      - ../../:/src
+      - ./conf/nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
